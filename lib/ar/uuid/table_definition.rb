@@ -5,17 +5,8 @@ module AR
     module TableDefinition
       def self.included(base)
         base.class_eval do
-          references = instance_method(:references)
-
-          define_method :references do |*args, **options|
-            options[:type] = :text unless options.include?(:type)
-
-            return if options.include?(:null)
-
-            options[:null] =
-              !ActiveRecord::Base.belongs_to_required_by_default
-
-            references.bind_call(self, *args, **options)
+          def references(*args, **options)
+            super(*args, **options, type: options.fetch(:type, :text))
           end
 
           def belongs_to(*, **)

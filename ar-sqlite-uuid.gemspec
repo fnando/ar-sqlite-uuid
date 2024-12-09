@@ -21,7 +21,6 @@ Gem::Specification.new do |spec|
   spec.license                     = "MIT"
   spec.required_ruby_version       = Gem::Requirement.new(">= 3.2.0")
   spec.metadata["rubygems_mfa_required"] = "true"
-  p spec.metadata
 
   spec.files         = `git ls-files -z`
                        .split("\x0")
