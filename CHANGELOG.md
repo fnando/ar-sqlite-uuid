@@ -11,7 +11,7 @@ Prefix your message with one of the following:
 - [Security] in case of vulnerabilities.
 -->
 
-## Unreleased
+## v0.0.2 (2024-12-09)
 
 - [Fixed] Don't do more than setting the primary key's type.
 
